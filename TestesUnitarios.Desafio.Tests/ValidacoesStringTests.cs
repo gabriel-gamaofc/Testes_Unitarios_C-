@@ -9,11 +9,11 @@ public class ValidacoesStringTests
     [Fact]
     public void DeveRetornar6QuantidadeCaracteresDaPalavraMatrix()
     {
-        //TODO: Corrigir a variável "texto" e "resultadoEsperado" da seção Arrange
+        //Implementado
 
         // Arrange
-        var texto = "a";
-        var resultadoEsperado = 0;
+        string texto = "Matrix";//mudei de var para string
+        int resultadoEsperado = 6;//mudei de var para int
 
         // Act
         var resultado = _validacoes.RetornarQuantidadeCaracteres(texto);
@@ -26,44 +26,45 @@ public class ValidacoesStringTests
     public void DeveContemAPalavraQualquerNoTexto()
     {
         // Arrange
-        var texto = "Esse é um texto qualquer";
-        var textoProcurado = "qualquer";
+        string texto = "Esse é um texto qualquer";//mudei de var para string
+        string textoProcurado = "qualquer";//mudei de var para string
 
-        //TODO: Corrigir a chamada do método "ContemCaractere" da seção Act
+        //Implementado
         // Act
-         _validacoes.ContemCaractere(texto, textoProcurado);
+         bool resultado =_validacoes.ContemCaractere(texto, textoProcurado);//mudei de var para bool
 
         // Assert
         //TODO: Corrigir o Assert.True com base no retorno da chamada ao método
-        Assert.True(true);
+        Assert.True(resultado);
     }
 
     [Fact]
     public void NaoDeveConterAPalavraTesteNoTexto()
     {
         // Arrange
-        var texto = "Esse é um texto qualquer";
-        var textoProcurado = "teste";
+        string texto = "Esse é um texto qualquer";//mudei de var para string
+        string textoProcurado = "teste";//mudei de var para string
 
         // Act
-        var resultado = _validacoes.ContemCaractere(texto, textoProcurado);
+        bool resultado = _validacoes.ContemCaractere(texto, textoProcurado);//mudei de var para bool
 
         // Assert
-        //TODO: Corrigir o Assert.False com base no retorno da chamada ao método
-        Assert.False(true);
+        //implementado
+        Assert.False(resultado);
     }
 
-    //TODO: Corrigir a anotação [Fact]
+    //implementado
+    [Fact]
     public void TextoDeveTerminarComAPalavraProcurado()
     {
-        //TODO: Corrigir a variável "textoProcurado" seção Arrange
+        //Implementado
 
         // Arrange
-        var texto = "Começo, meio e fim do texto procurado";
-        var textoProcurado = "teste";
+        string texto = "Começo, meio e fim do texto procurado";//mudei de var para string
+        string textoProcurado = "procurado";//mudei de var para string
 
         // Act
-        var resultado = _validacoes.TextoTerminaCom(texto, textoProcurado);
+        bool resultado = _validacoes.TextoTerminaCom(texto, textoProcurado);//mudei de var para bool
 
         // Assert
         Assert.True(resultado);
